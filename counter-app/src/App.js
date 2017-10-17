@@ -13,7 +13,9 @@ class App extends Component {
         <p className="App-intro">
           <code>An easy way to track usage of moves!</code>
         </p>
+        <span>
         <button>Forward Air</button>
+        </span>
       </div>
     );
   }
