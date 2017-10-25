@@ -14,13 +14,25 @@ class App extends Component {
           <code>An easy way to track usage of moves!</code>
         </p>
         <span>
-        <button>Forward Air</button>
+        <button>
+        Forward Air
+        </button>
+        </span>
+
+        <span>
+        <button>
+        Nair
+        </button>
+        </span>
+        
+        <span>
+        <button>
+      Shadow Ball
+        </button>
         </span>
       </div>
-    );
-  }
-}
+        );
+      }
+    }
 
-
-
-export default App;
+    export default App;
