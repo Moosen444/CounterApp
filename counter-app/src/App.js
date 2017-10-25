@@ -14,7 +14,7 @@ class App extends Component {
           <code>An easy way to track usage of moves!</code>
         </p>
         <span>
-        <button>
+        <button onClick={() => {alert("wat")}}>
         Forward Air
         </button>
         </span>
@@ -24,7 +24,7 @@ class App extends Component {
         Nair
         </button>
         </span>
-        
+
         <span>
         <button>
       Shadow Ball
