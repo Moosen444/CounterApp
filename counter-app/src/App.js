@@ -13,8 +13,12 @@ class App extends Component {
         <p className="App-intro">
           <code>An easy way to track usage of moves!</code>
         </p>
+        getInitialState: function(){
+          return { count: 0 };
+        },
+        incrementFair: function() {}
         <span>
-        <button onClick={() => {alert("wat")}}>
+         <button onClick={() => {}}>
         Forward Air
         </button>
         </span>
