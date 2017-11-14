@@ -13,30 +13,28 @@ class App extends Component {
         <p className="App-intro">
           <code>An easy way to track usage of moves!</code>
         </p>
-        getInitialState: function(){
-          return { count: 0 };
-        },
-        incrementFair: function() {}
-        <span>
-         <button onClick={() => {}}>
-        Forward Air
-        </button>
-        </span>
-
-        <span>
-        <button>
-        Nair
-        </button>
-        </span>
-
-        <span>
-        <button>
-      Shadow Ball
-        </button>
-        </span>
-      </div>
-        );
-      }
+        var MewtwoFair = React.createClass({
+    getInitialState: function() {
+        return {
+            numClicks: 0
+        }
     }
+    click: function() {
+        this.setState(numClicks: this.state.numClicks + 1);
+    },
+    render: function() {
+       return  (
+        <div>
+            <button onClick={this.click.bind(this)}>Mewtwo Fair</button>
+            {this.state.numClicks}
+        </div>
+       );
+   }
+});
+        </div>
+      );
+    }
+  }
+
 
     export default App;
