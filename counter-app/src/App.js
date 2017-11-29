@@ -6,15 +6,40 @@ import './App.css';
 class Inc extends React.Component {
  constructor(props){
    super(props);
-   this.state = {counter : 0}
-   this.increment = this.increment.bind(this);
+   this.state = {
+     counterFair : 0,
+     counterNair : 0,
+     counterShadowBall : 0,
+     counterReset : 0,
+   };
+   this.incrementFair = this.incrementFair.bind(this);
+   this.incrementNair = this.incrementNair.bind(this);
+   this.incrementShadowBall = this.incrementShadowBall.bind(this);
+   this.incrementReset = this.incrementReset.bind(this);
   }
-  increment(){
+  incrementFair(){
+    this.setState(
+      {//squiggle bracket could be an object(counter is a property of the object)
+        counterFair : this.state.counterFair + 1,
+      }
+    );
+  }
+  incrementNair(){
     this.setState({
-      counter : this.state.counter + 1
+      counterNair : this.state.counterNair + 1,
     });
   }
-
+  incrementShadowBall(){
+    this.setState({
+      counterShadowBall : this.state.counterShadowBall + 1,
+    });
+  }
+  Reset(){
+    this.setState({
+      counterReset : this.state.counterReset = 0
+    });
+  }
+//3 seperate functions and state.counters and 3 seprate properties
   render() {
     return (
       <div className="App">
@@ -23,14 +48,17 @@ class Inc extends React.Component {
           <h1 className="App-title">Mewtwo Move Counter</h1>
         </header>
         <span>
-            <button onClick={this.increment}>Mewtwo Fair {this.state.counter}</button>
+            <button onClick={this.incrementFair}>Mewtwo Fair {this.state.counterFair}</button>
         </span>
         <span>
-            <button onClick={this.increment}>Mewtwo Nair {this.state.counter}</button>
+            <button onClick={this.incrementNair}>Mewtwo Nair {this.state.counterNair}</button>
         </span>
         <span>
-            <button onClick={this.increment}>Mewtwo Shadow Ball {this.state.counter}</button>
+            <button onClick={this.incrementShadowBall}>Mewtwo Shadow Ball {this.state.counterShadowBall}</button>
         </span>
+        <div>
+            <button onClick={this.Reset}>Reset {this.state.counterReset}</button>
+        </div>
       </div>
     );
   }
