@@ -10,12 +10,11 @@ class Inc extends React.Component {
      counterFair : 0,
      counterNair : 0,
      counterShadowBall : 0,
-     counterReset : 0,
    };
    this.incrementFair = this.incrementFair.bind(this);
    this.incrementNair = this.incrementNair.bind(this);
    this.incrementShadowBall = this.incrementShadowBall.bind(this);
-   this.incrementReset = this.incrementReset.bind(this);
+   this.Reset = this.Reset.bind(this);
   }
   incrementFair(){
     this.setState(
@@ -36,7 +35,9 @@ class Inc extends React.Component {
   }
   Reset(){
     this.setState({
-      counterReset : this.state.counterReset = 0
+        counterFair : 0,
+        counterNair : 0,
+        counterShadowBall : 0,
     });
   }
 //3 seperate functions and state.counters and 3 seprate properties
@@ -57,7 +58,7 @@ class Inc extends React.Component {
             <button onClick={this.incrementShadowBall}>Mewtwo Shadow Ball {this.state.counterShadowBall}</button>
         </span>
         <div>
-            <button onClick={this.Reset}>Reset {this.state.counterReset}</button>
+            <button onClick={this.Reset}>Reset</button>
         </div>
       </div>
     );
